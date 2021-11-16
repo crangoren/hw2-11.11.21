@@ -34,5 +34,6 @@ public class MainClass {
                 System.out.println("Введите id доступного товара");
             }
         }
+
     }
 }

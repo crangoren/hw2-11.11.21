@@ -1,6 +1,6 @@
 package Context;
 
-public class Products {
+public class Product {
     private long id;
     private String title;
 
@@ -20,7 +20,7 @@ public class Products {
         this.title = title;
     }
 
-    public Products(long id, String title) {
+    public Product(long id, String title) {
         this.id = id;
         this.title = title;
     }

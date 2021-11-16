@@ -28,11 +28,11 @@ public class OrderService {
         System.out.println("Доступны продукты: " + productService.getProductList());
 
     }
-    public List<Products> showProdList() {
+    public List<Product> showProdList() {
         return productService.getProductList();
     }
 
-    public List<Products> showProdCart() {
+    public List<Product> showProdCart() {
         return cart.showCart();
     }
 

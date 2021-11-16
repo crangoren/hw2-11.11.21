@@ -18,7 +18,7 @@ public class ProductService {
     public String getTitleById(long id) {
         return productRepository.findById(id).getTitle();
     }
-    public List<Products> getProductList() {
+    public List<Product> getProductList() {
         return productRepository.showProductList();
     }
 }

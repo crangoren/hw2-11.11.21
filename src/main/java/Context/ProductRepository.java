@@ -11,24 +11,24 @@ import java.util.Objects;
 @Component
 public class ProductRepository {
 
-    private List<Products> products;
+    private List<Product> products;
 
     @PostConstruct
     public void init() {
         products = new ArrayList<>(Arrays.asList(
-                new Products(1L, "Bread"),
-                new Products(2L, "Milk"),
-                new Products(3L, "Apples"),
-                new Products(4L, "Butter"),
-                new Products(5L, "Soda")
+                new Product(1L, "Bread"),
+                new Product(2L, "Milk"),
+                new Product(3L, "Apple"),
+                new Product(4L, "Butter"),
+                new Product(5L, "Soda")
         ));
     }
 
-    public Products findById(long id) {
+    public Product findById(long id) {
         return products.stream().filter(p -> Objects.equals(p.getId(), id)).findFirst().orElseThrow(() -> new RuntimeException());
     }
 
-    public List<Products> showProductList() {
+    public List<Product> showProductList() {
         return products;
     }
 }
