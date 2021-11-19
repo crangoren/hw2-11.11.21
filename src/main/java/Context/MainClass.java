@@ -12,8 +12,10 @@ public class MainClass {
         OrderService orderService = context.getBean(OrderService.class);
         System.out.println("Доступны продукты: " + orderService.showProdList());
         System.out.println("Введите id продукта для добавления в корзину или 222 для выхода");
+        System.out.println("Введите -id товара который хотите удалить");
         System.out.println("Введите 111 чтобы показать корзину");
         System.out.println("Введите 333 для оформления заказа");
+
 
         while (true) {
             Scanner scanner = new Scanner(System.in);
@@ -23,6 +25,9 @@ public class MainClass {
             }
             else if (order == 111) {
                 System.out.println("В корзине: " + orderService.showProdCart().toString());
+            } else if (order < 0 && order >= -5) {
+            orderService.deleteById(order * -1L);
+            System.out.println("Товар " + order * -1L + " удален из корзины");
             } else if (order == 333){
                 System.out.println("Спасибо за заказ!");
                 break;

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Objects;
 
 @Component
 public class Cart {
@@ -35,6 +36,11 @@ public class Cart {
 
     public List<Product> showCart() {
         
+        return cart;
+    }
+
+    public List<Product> removeById (long id) {
+        cart.removeIf(product -> Objects.equals(product.getId(), id));
         return cart;
     }
 

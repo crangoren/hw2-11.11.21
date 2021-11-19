@@ -3,10 +3,7 @@ package Context;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Component
 public class ProductRepository {
@@ -29,6 +26,7 @@ public class ProductRepository {
     }
 
     public List<Product> showProductList() {
-        return products;
+        return Collections.unmodifiableList(products);
     }
+
 }

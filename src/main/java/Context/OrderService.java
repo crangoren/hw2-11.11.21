@@ -36,4 +36,10 @@ public class OrderService {
         return cart.showCart();
     }
 
+
+    public void deleteById(long id) {
+        cart.removeById(id);
+        showProdCart();
+    }
+
 }
