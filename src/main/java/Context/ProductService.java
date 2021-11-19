@@ -15,7 +15,7 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public String getTitleById(long id) {
+    public String getTitleById(Long id) {
         return productRepository.findById(id).getTitle();
     }
     public List<Product> getProductList() {

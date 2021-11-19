@@ -1,10 +1,10 @@
 package Context;
 
 public class Product {
-    private long id;
+    private Long id;
     private String title;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -20,7 +20,7 @@ public class Product {
         this.title = title;
     }
 
-    public Product(long id, String title) {
+    public Product(Long id, String title) {
         this.id = id;
         this.title = title;
     }

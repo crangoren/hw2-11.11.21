@@ -21,7 +21,7 @@ public class ProductRepository {
         ));
     }
 
-    public Product findById(long id) {
+    public Product findById(Long id) {
         return products.stream().filter(p -> Objects.equals(p.getId(), id)).findFirst().orElseThrow(() -> new RuntimeException());
     }
 

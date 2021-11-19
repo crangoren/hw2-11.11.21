@@ -29,7 +29,7 @@ public class Cart {
         this.productRepository = productRepository;
     }
 
-    public void fillCart(long id) {
+    public void fillCart(Long id) {
 
         cart.add(productRepository.findById(id));
     }
@@ -39,7 +39,7 @@ public class Cart {
         return cart;
     }
 
-    public List<Product> removeById (long id) {
+    public List<Product> removeById (Long id) {
         cart.removeIf(product -> Objects.equals(product.getId(), id));
         return cart;
     }

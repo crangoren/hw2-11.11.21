@@ -21,7 +21,7 @@ public class OrderService {
         this.cart = cart;
     }
 
-    public void createOrderFromProduct(long productId) {
+    public void createOrderFromProduct(Long productId) {
 
         cart.fillCart(productId);
         System.out.println("Заказ создан");
@@ -37,7 +37,7 @@ public class OrderService {
     }
 
 
-    public void deleteById(long id) {
+    public void deleteById(Long id) {
         cart.removeById(id);
         showProdCart();
     }

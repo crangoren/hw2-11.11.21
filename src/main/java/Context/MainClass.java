@@ -19,7 +19,7 @@ public class MainClass {
 
         while (true) {
             Scanner scanner = new Scanner(System.in);
-            long order = scanner.nextLong();
+            Long order = scanner.nextLong();
             if (order > 0 && order <= 5) {
                 orderService.createOrderFromProduct(order);
             }
